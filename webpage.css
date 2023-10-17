@@ -1,0 +1,91 @@
+section{
+    background: linear-gradient(to top right, #33ccff 0%, #339966 100%);
+    height: 90vh;
+    width: 85vw;
+    margin: 9%;
+    align-items: center;
+    display: flex;
+    justify-content:center;
+    
+}
+.pic{
+    position: relative;
+    height:80%;
+    text-align: center;
+    color: white;
+    justify-content: center;
+}
+.top-left{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.center1{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+.center2{
+    position: absolute;
+    top: 19%;
+    left: 30%;
+}
+.center3{
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+label{
+    display: inline-block;
+    width: 120px;
+}
+.form{
+    background-color: white;
+    height: 80%;
+    border-style: none;
+    border-top: 50px;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: center;
+
+}
+h1{
+    text-align: center;
+    color:rgb(18, 141, 141);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    text-align: center;
+}
+#sub{
+    
+    text-align: center;
+}
+#reset{
+    background-color: rgb(16, 16, 69);
+    color: white;
+    width: 80px;
+    height: 25px;
+    border-style: none;
+}
+#submit{
+    background-color: rgb(18, 141, 141);
+    color: white;
+    width: 80px;
+    height: 25px;
+    border-style: none;
+}
+#button1, #button2, #button3{
+    background-color: white;
+    border-style: none;
+}
+#button1:focus, #button2:focus, #button3:focus{
+    color:  rgb(18, 141, 141) ;
+}
+
