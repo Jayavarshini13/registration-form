@@ -4,11 +4,14 @@ section{
     width: 85vw;
     margin: 9%;
     align-items: center;
+    padding-top: 12%;
+    padding-bottom: 12%;
+    padding-right: 10%;
     display: flex;
     justify-content:center;
-    
 }
 .pic{
+    display: flex;
     position: relative;
     height:80%;
     text-align: center;
@@ -16,24 +19,34 @@ section{
     justify-content: center;
 }
 .top-left{
+    display: flex;
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 10px;
 }
 .center1{
+    display: flex;
     position: absolute;
     top: 20%;
     left: 25%;
 }
 .center2{
+    display: flex;
     position: absolute;
     top: 19%;
     left: 30%;
 }
 .center3{
+    display: flex;
     position: absolute;
     bottom: 15%;
     left: 25%;
+}
+.top-right{
+    display: flex;
+    position:absolute;
+    top: 10px;
+    left: 90%;
 }
 img{
     max-width: 100%;
@@ -53,7 +66,6 @@ label{
     padding-left: 2%;
     padding-right: 2%;
     justify-content: center;
-
 }
 h1{
     text-align: center;
@@ -62,6 +74,9 @@ h1{
 }
 p{
     text-align: center;
+}
+#male{
+    list-style: 9794;
 }
 #sub{
     
@@ -88,4 +103,24 @@ p{
 #button1:focus, #button2:focus, #button3:focus{
     color:  rgb(18, 141, 141) ;
 }
-
+@media(max-width:600px) {
+    section {
+        background: none;
+        position:absolute;
+        font-size:x-small;
+        flex-direction: column;
+}
+    div[class='form']{
+        justify-content: center;
+}
+    div[class='pic']{
+        display:flex;
+        height: 100%;
+        width: 100%;
+        align-items: baseline;
+        text-align: center;
+    }
+    #button1, #button2, #button3 {
+        font-size: x-small;
+    }
+}
