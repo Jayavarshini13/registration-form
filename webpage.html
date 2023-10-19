@@ -20,22 +20,47 @@
             <h1>Registration</h1>
             <p>CLICK FOR YOUR SHOOT</p>
             <form>
-                <label>Name  </label><input type="text" placeholder="Enter your name" required><br><br>
-                <label>Email  </label><input type="email" placeholder="Email" required><br><br>
+                <label>Name  </label><input type="text" id="name" placeholder="Enter your name" required><br><br>
+                <label>Email  </label><input type="email" id="email" placeholder="Email" required><br><br>
                 <label>Gender  </label><input type="radio" name="gender" id="male" value="Male"><label for="1">Male</label>
-                <input type="radio" name="gender" id="2" value="Female"><label for="female">Female</label><br><br>
-                <label>Date of birth</label><input type="date" required><br><br>
-                <label>City</label><input type="text" placeholder="city" required><br><br>
-                <label>Country</label><input type="text" placeholder="Country" required><br><br>
+                <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label><br><br>
+                <label>Date of birth</label><input type="date" id="date" required><br><br>
+                <label>City</label><input type="text" placeholder="city" id="city" required><br><br>
+                <label>Country</label><input type="text" placeholder="Country" id="country" required><br><br>
                 <label>Subscription</label><input id="button1" type="button" value="Bronze">
                 <input id="button2" type="button" value="Silver">
                 <input id="button3" type="button" value="Gold"><br><br>
                 <div id="sub">
                     <input id="reset" type="reset" value="cancel">
-                    <input id="submit" type="submit" value="confirm">
+                    <input id="submit" type="submit" value="confirm" onclick="myFunction()">
                 </div>
-            </form>
+            </form><br>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+            <p id="demo3"></p>
+            <p id="demo4"></p>
+            <p id="demo5"></p>
+            <p id="demo6"></p>
+            <p id="demo7"></p>
         </div>
     </section>
+    <script>
+    function myFunction(){
+        var x=document.getElementById("name").value;
+        document.getElementById("demo1").innerHTML=x;
+        var y=document.getElementById("email").value;
+        document.getElementById("demo2").innerHTML=y;
+        var z=document.getElementById("gender").value;
+        document.getElementById("demo3").innerHTML=z;
+        var a=document.getElementById("date").value;
+        document.getElementById("demo4").innerHTML=a;
+        var b=document.getElementById("city").value;
+        document.getElementById("demo5").innerHTML=b;
+        var c=document.getElementById("country").value;
+        document.getElementById("demo6").innerHTML=c;
+        var d=document.getElementById("button").value;
+        document.getElementById("demo7").innerHTML=d;
+    }
+    </script>
 </body>
 </html>
