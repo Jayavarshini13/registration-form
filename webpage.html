@@ -19,7 +19,7 @@
         <div class="form">
             <h1>Registration</h1>
             <p>CLICK FOR YOUR SHOOT</p>
-            <form>
+            <form id="myForm">
                 <label>Name  </label><input type="text" id="name" placeholder="Enter your name" required><br><br>
                 <label>Email  </label><input type="email" id="email" placeholder="Email" required><br><br>
                 <label>Gender  </label><input type="radio" name="gender" id="male" value="Male"><label for="1">Male</label>
@@ -27,39 +27,49 @@
                 <label>Date of birth</label><input type="date" id="date" required><br><br>
                 <label>City</label><input type="text" placeholder="city" id="city" required><br><br>
                 <label>Country</label><input type="text" placeholder="Country" id="country" required><br><br>
-                <label>Subscription</label><input id="button1" type="button" value="Bronze">
-                <input id="button2" type="button" value="Silver">
-                <input id="button3" type="button" value="Gold"><br><br>
+                <label>Subscription</label><input name="submission" id="button1" type="button" value="Bronze">
+                <input name="submission" id="button2" type="button" value="Silver">
+                <input name="submission" id="button3" type="button" value="Gold"><br><br>
                 <div id="sub">
                     <input id="reset" type="reset" value="cancel">
-                    <input id="submit" type="submit" value="confirm" onclick="myFunction()">
+                    <input id="submit" type="submit" value="confirm">
                 </div>
             </form><br>
             <p id="demo1"></p>
-            <p id="demo2"></p>
+            <!-- <p id="demo2"></p>
             <p id="demo3"></p>
             <p id="demo4"></p>
             <p id="demo5"></p>
             <p id="demo6"></p>
-            <p id="demo7"></p>
+            <p id="demo7"></p> -->
         </div>
     </section>
     <script>
-    function myFunction(){
-        var x=document.getElementById("name").value;
-        document.getElementById("demo1").innerHTML=x;
-        var y=document.getElementById("email").value;
-        document.getElementById("demo2").innerHTML=y;
-        var z=document.getElementById("gender").value;
-        document.getElementById("demo3").innerHTML=z;
-        var a=document.getElementById("date").value;
-        document.getElementById("demo4").innerHTML=a;
-        var b=document.getElementById("city").value;
-        document.getElementById("demo5").innerHTML=b;
-        var c=document.getElementById("country").value;
-        document.getElementById("demo6").innerHTML=c;
-        var d=document.getElementById("button").value;
-        document.getElementById("demo7").innerHTML=d;
+    document.getElementById('myForm').onsubmit = function (event) {
+        
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var date = document.getElementById("date").value;
+        var city = document.getElementById("city").value;
+        var country = document.getElementById("country").value;
+        var subscription = document.querySelector('input[name="submission"]:checked');
+
+        var outputDiv = document.getElementById("demo1");
+        outputDiv.innerHTML = "Name: " + name + "<br>Email: " + email + "<br>Gender: " + (gender ? gender.value : "Not specified") +
+            "<br>Date: " + date + "<br>City: " + city + "<br>Country: " + country + "<br>Subscription: " + (subscription ? subscription.value : "Not specified");
+
+
+
+    //     document.getElementById("demo1").innerHTML=x;
+    //     document.getElementById("demo2").innerHTML=y;
+    //     document.querySelector("demo3").innerHTML=z;
+    //     document.getElementById("demo4").innerHTML=a;
+    //     document.getElementById("demo5").innerHTML=b;
+    //     document.getElementById("demo6").innerHTML=c;
+    //     document.querySelector("demo7").innerHTML=d; 
+
     }
     </script>
 </body>
